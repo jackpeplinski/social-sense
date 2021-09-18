@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "socialsense",
+  "private_key_id": "c8dcf7afe7fa6aabd03964d3327e9f06111ba47d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDmAGDNX1m7pmp\nNlobp3IG5n87UxcJfBf5cIwZvNVzLeR/punx7n7yKdBpyAq+O8VqMVMmmHvWu1pu\nGafG7kM+ol2vAvIpx/5WpMq+aa4/NPeD8ty6UNzLOs0ghujcC8lt3g/jIUmv6jZr\ne0cthGFzD4nVQDzWg5wIoCltDuu53o2dxBmb3/vdH2mMIRIPXSa5KCBBIENU3Ss/\ny7DZ8w4cfihhOp2klUtMxZJWm21oheDGVT2Knqo+sD/hSWRoCpO7BCuo9WrNO8cw\n/8teDHldBry2Fx0M37utyNowSqLGCPsKEkD3+j0FOOKzH5SDsHClqDGB81E9MRxE\nGuOLxaHPAgMBAAECggEAH/rMfy18ZsYAQxXAlIuY2IlQqDHPrxymYYGwsSHvgbjb\n3AXoc5wGZDBzWQ2nZASAefpn7q7jy0Tau5cKQuZWAaRTzkzxrI8nMKIaXBkKBQpI\npemhg/0Qp1HilBI6zy+bgZEwkSGyMJxfcCIPOIv6evDsHP03H+5o0VLj3bxLd8TN\nc+EmgGEZzoSl3cHq0cwPCTfKSmYDGZNy7RQ8CHVHnHoReQ1HgfHeVQIbBL9jMgbD\n3pnQiL7KBKdAlKzhroC7IzGpR8EIgOkwBJ3lJUnXpdaw3jzd1BW4/Ug24ZyxxGft\nL6NMXxAta+8s0eQlyFpI66dbwSOiphjofVJAoy32oQKBgQD01SfckRslznMCVfmU\nuxMNveEjEU8sklNid86ijlqlCtg+JAhPIYVlh9dn6OcfMGPkwzaLkl1HdNcOW/zV\n71TINLQHCeo47ZgFhZF5Zmh2cj2wSxvbwHVyqOuZX4dZgp0bHlHtKAmMFD838Vuw\nIumbN2jk0r26va6C2ghpkNLTKQKBgQDMg+a8xkp2R4oBwrvrI5xHVNlLFTX8D0NT\nYlgqW89Tgld1Sizcsqbl4C/+JWaEj7fUzF6JY7ORDgTWMfK/7LcHrxmMez9d2ayf\nLPxlzOp3rA4wJw7HyDaPN/ZVt15u57wsktlpp+rp9V903XzM346AC7K9MvmMAiQK\nZbji4BSkNwKBgFAnuPUtTIYEIQMSwrM+y+4jzCF++TzOax5BuxTdJjACbOlrQo0l\nnFaxMoSCa6h6Xzn171WihYdvaTj6RLyFrmwdVRM428Xng23LXOUx8eFVZXziGizH\nxavUQc3kyJs1d9n5Azlxci66MjhOfIYd5/05Fs5TcGpCz29nknl9QIiBAoGBAMhm\n+8PBXpfWdCJTisbYJzwypZaQW0z6O9PKi3A+dMN09nRlUd6VZTveWcjlJzcAiXeJ\nJ53jR8L9BLpLSX7N23A5IYTqBGbXdPKpJ04t5ReNTn3a1/3mb6gZg1XtECkHBPp8\nj3Sb6XKGUZp3quIqsj1AuU3yVFvggSZ7FRej0jYzAoGBAOlCxyJfJXVL9rNuu2BP\n50pUhCUm5zYB5XSAXaLl2FPchPmmJjwLZ+eI+S7ktXS7RwHu2EWW/NqDg6l5Euug\nKGFnUkmhjmbqQ5vuhUaeEz/4HRHAO5frJeHeV3PnqvPQWzqfYlOYlw7khpZjUiIl\nfWh/bFHeL6Vsz57AgDAqPXI9\n-----END PRIVATE KEY-----\n",
+  "client_email": "nlp-540@socialsense.iam.gserviceaccount.com",
+  "client_id": "101535970398856491970",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nlp-540%40socialsense.iam.gserviceaccount.com"
+}
