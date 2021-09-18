@@ -36,22 +36,24 @@ const data = [
 
 const Pie = () => {
   return (
-    <div style={{height:600}}>
+    <div style={{ height: 600 }}>
       <ResponsivePie
         data={data}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-        innerRadius={0.5}
-        padAngle={0.7}
-        cornerRadius={3}
+        innerRadius={0.65}
         activeOuterRadiusOffset={8}
-        borderWidth={1}
+        colors={{ scheme: "red_yellow_green" }}
         borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
+        enableArcLinkLabels={false}
         arcLinkLabelsSkipAngle={10}
         arcLinkLabelsTextColor="#333333"
         arcLinkLabelsThickness={2}
         arcLinkLabelsColor={{ from: "color" }}
-        arcLabelsSkipAngle={10}
-        arcLabelsTextColor={{ from: "color", modifiers: [["darker", 2]] }}
+        arcLabel={function (e) {
+          return e.id + " (" + e.value + ")";
+        }}
+        arcLabelsTextColor={{ from: "color", modifiers: [["darker", "3"]] }}
+        legends={[]}
       />
     </div>
   );

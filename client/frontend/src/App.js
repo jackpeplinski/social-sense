@@ -1,5 +1,6 @@
 import "./App.css";
-import Pie from "./pie";
+import Pie from "./components/pie";
+import Card from "./components/card";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <h2>Your overall group rating</h2>
         <Pie />
       </div>
+      <Card />
     </div>
   );
 }
