@@ -5,21 +5,27 @@ exports.Users = sequelize.define("users", {
   user_id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
+    allowNull: false
   },
   group_id: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false
   },
   group_name: {
-    type: Sequelize.TEXT
+    type: Sequelize.TEXT,
+    allowNull: false,
   },
   happy_count: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false
   },
   neutral_count: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false
   },
   sad_count: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false
   },
 })
 
