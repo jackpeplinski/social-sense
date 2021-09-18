@@ -50,7 +50,7 @@ print (userid);
 
 @app.route('/',methods=["GET"])
 def home():
-    url=''
+    url="localhost:3000/api/users/group-counts"
 
     userid = graph.get_object("/me?fields=id")
     grouping = graph.request(userid["id"] + "/groups")['data']
