@@ -4,7 +4,6 @@ const sequelize = require('../utility/connectDB')
 exports.Users = sequelize.define("users", {
   user_id: {
     type: Sequelize.INTEGER,
-    primaryKey: true,
     allowNull: false
   },
   group_id: {

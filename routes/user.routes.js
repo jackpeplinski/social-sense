@@ -32,7 +32,7 @@ router.get('/group-counts', async (req, res) => {
     await Users.sync({ force: false })
     const data = await Users.findAll({ where: { user_id: user_id } })
     console.log(data)
-    res.status(200).json("")
+    res.status(200).json()
   } catch (err) {
     res.status(400).json({ "error": err })
   }
