@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize-cockroachdb");
-const sequelize = require('../utility/connectDB')
+const sequelize = require('../server/utility/connectDB')
 
 exports.Users = sequelize.define("users", {
   user_id: {

@@ -9,6 +9,10 @@ app.use(express.json());
 
 app.use('/api/users', userRoutes)
 
+app.get("/", (req, res) => {
+  res.status(200).json({"The Database is alive!": true})
+})
+
 const port = process.env.PORT
 const host = process.env.HOST
 
