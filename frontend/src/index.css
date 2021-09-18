@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+
+html {
+  height: 100%;
+  background: linear-gradient(180deg, #4838AC 0%, #130A45 100%) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 96px;
+  margin: 0;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  color: #3A2C91;
+  margin: 0;
+  font-size: 46px;
+}
+
+.card {
+  width: 60vw;
+  margin: 5vh auto;
+  background: white;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 20px;
+}
