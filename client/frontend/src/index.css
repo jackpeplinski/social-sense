@@ -71,3 +71,10 @@ h2 {
 .card-container-header {
   padding: 10px;
 }
+
+.card-header {
+  color: #3a2c91;
+  margin: 0;
+  font-size: 46px;
+  font-weight: bold;
+}

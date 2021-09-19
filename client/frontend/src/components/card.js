@@ -3,7 +3,10 @@ import React from "react";
 const Card = () => {
   return (
     <div className="individual-card">
-      <h1>Love corgis</h1>
+      <div>
+        <div className="card-header">Love corgis</div>
+        <div>98%</div>
+      </div>
     </div>
   );
 };
