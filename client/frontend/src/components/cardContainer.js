@@ -7,7 +7,7 @@ const CardContainer = () => {
       <div className="card-container-label-wrapper">
         <div className="card-container-label">
           <div className="card-container-header">
-            <h2>Your groups</h2>
+            <h2>Each groups</h2>
           </div>
         </div>
       </div>
