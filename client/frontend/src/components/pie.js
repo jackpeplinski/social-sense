@@ -1,16 +1,18 @@
 import { ResponsivePie } from "@nivo/pie";
-import {useState, useEffect} from "react";
-const axios = require('axios')
+import { useState, useEffect } from "react";
+const axios = require("axios");
 
 const Pie = () => {
-
-  const [pieInfo, setPieInfo] = useState([])
+  const [pieInfo, setPieInfo] = useState([]);
 
   useEffect(() => {
     async function getTotalPie() {
-      try{
-        const info = await axios.get(`http://localhost:3000/api/users/group-total-counts`, {params: {userID: 1}})
-        const data = info.data
+      try {
+        const info = await axios.get(
+          `http://localhost:3000/api/users/group-total-counts`,
+          { params: { userID: 1 } }
+        );
+        const data = info.data;
         setPieInfo([
           {
             id: "Happy Posts",
@@ -30,13 +32,11 @@ const Pie = () => {
             value: data.sad_count,
             color: "black",
           },
-        ])
-      }catch(err){
-
-      }
+        ]);
+      } catch (err) {}
     }
-    getTotalPie()
-  }, [])
+    getTotalPie();
+  }, []);
 
   return (
     <div style={{ height: 600 }}>
@@ -65,35 +65,34 @@ const Pie = () => {
 export default Pie;
 
 // const data = [
-  //   {
-  //     id: "java",
-  //     label: "java",
-  //     value: 195,
-  //     color: "hsl(90, 70%, 50%)",
-  //   },
-  //   {
-  //     id: "erlang",
-  //     label: "erlang",
-  //     value: 419,
-  //     color: "hsl(56, 70%, 50%)",
-  //   },
-  //   {
-  //     id: "ruby",
-  //     label: "ruby",
-  //     value: 407,
-  //     color: "hsl(103, 70%, 50%)",
-  //   },
-  //   {
-  //     id: "haskell",
-  //     label: "haskell",
-  //     value: 474,
-  //     color: "hsl(186, 70%, 50%)",
-  //   },
-  //   {
-  //     id: "go",
-  //     label: "go",
-  //     value: 71,
-  //     color: "hsl(104, 70%, 50%)",
-  //   },
-  // ];
-  
+//   {
+//     id: "java",
+//     label: "java",
+//     value: 195,
+//     color: "hsl(90, 70%, 50%)",
+//   },
+//   {
+//     id: "erlang",
+//     label: "erlang",
+//     value: 419,
+//     color: "hsl(56, 70%, 50%)",
+//   },
+//   {
+//     id: "ruby",
+//     label: "ruby",
+//     value: 407,
+//     color: "hsl(103, 70%, 50%)",
+//   },
+//   {
+//     id: "haskell",
+//     label: "haskell",
+//     value: 474,
+//     color: "hsl(186, 70%, 50%)",
+//   },
+//   {
+//     id: "go",
+//     label: "go",
+//     value: 71,
+//     color: "hsl(104, 70%, 50%)",
+//   },
+// ];
