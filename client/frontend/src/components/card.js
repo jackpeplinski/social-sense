@@ -1,4 +1,4 @@
-const Card = () => {
+const Card = () => { 
   return (
     <div className="individual-card">
       <div className="individual-card-inner">
