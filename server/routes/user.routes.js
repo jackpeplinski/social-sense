@@ -69,7 +69,7 @@ router.get('/group-total-counts', async (req, res) => {
 })
 
 router.get('/group-counts', async (req, res) => {
-  const user_id = req.body.userID
+  const user_id = req.query.userID
   let response = {}
   try {
     await Users.sync({ force: false })
