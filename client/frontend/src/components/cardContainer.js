@@ -10,11 +10,11 @@ const CardContainer = () => {
       try {
         const data = await axios.get(
           `http://localhost:3000/api/users/group-counts`,
-          { params: { userID: 1 } }
+          { params: { userID: 105268415245934 } }
         );
         const numberOfCards = Object.keys(data.data).length;
         console.log(numberOfCards);
-        const items = [];        
+        const items = [];
         console.log(data);
         const info = data.data;
         for (const group_id in info) {
@@ -25,18 +25,25 @@ const CardContainer = () => {
           var sadCount = infoGroupId.sad_count;
           var maxCount;
           var maxCategory;
-          if(happyCount >= neutralCount && happyCount >= sadCount) {
-            maxCount = happyCount;
-            maxCategory = 'happy'
+          var sum = happyCount + sadCount + neutralCount;
+          if (happyCount >= neutralCount && happyCount >= sadCount) {
+            maxCount = Math.round((happyCount / sum) * 100);
+            maxCategory = "happy";
           } else if (neutralCount >= happyCount && neutralCount >= sadCount) {
-            maxCount = neutralCount;
-            maxCategory = 'happy';
+            maxCount = Math.round((neutralCount / sum) * 100);
+            maxCategory = "happy";
           } else {
-            maxCount = sadCount;
-            maxCategory = 'sad'
+            maxCount = Math.round((sadCount / sum) * 100);
+            maxCategory = "sad";
           }
 
-          items.push(<Card header={infoGroupId.group_name} number={maxCount} maxCategory={maxCategory}/>);
+          items.push(
+            <Card
+              header={infoGroupId.group_name}
+              number={maxCount}
+              maxCategory={maxCategory}
+            />
+          );
         }
         setFields(items);
       } catch (err) {}
@@ -49,7 +56,7 @@ const CardContainer = () => {
       <div className="card-container-label-wrapper">
         <div className="card-container-label">
           <div className="card-container-header">
-            <h2>Each groups</h2>
+            <h2>My groups</h2>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ const Pie = () => {
       try {
         const info = await axios.get(
           `http://localhost:3000/api/users/group-total-counts`,
-          { params: { userID: 1 } }
+          { params: { userID: 105268415245934 } }
         );
         const data = info.data;
         setPieInfo([
@@ -45,7 +45,7 @@ const Pie = () => {
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.65}
         activeOuterRadiusOffset={8}
-        colors={['#EB5757', '#BDBDBD', '#6FCF97']}
+        colors={["#6FCF97", "#BDBDBD", "#EB5757"]}
         borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
         enableArcLinkLabels={false}
         arcLinkLabelsSkipAngle={10}
