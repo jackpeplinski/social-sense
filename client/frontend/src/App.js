@@ -1,16 +1,15 @@
-import "./App.css";
 import Pie from "./components/pie";
-import Card from "./components/card";
+import CardContainer from "./components/cardContainer";
 
 function App() {
   return (
     <div className="App">
       <h1>SOCIALSENSE</h1>
-      <div className="card">
-        <h2>Your overall group rating</h2>
+      <div className="overall-card">
+        <h2>All groups</h2>
         <Pie />
       </div>
-      <Card />
+      <CardContainer/>
     </div>
   );
 }
