@@ -12,11 +12,31 @@ const CardContainer = () => {
           `http://localhost:3000/api/users/group-counts`,
           { params: { userID: 1 } }
         );
+        const numberOfCards = Object.keys(data.data).length;
+        console.log(numberOfCards);
+        const items = [];        
         console.log(data);
-        const numberOfCards = Object.keys(data).length;
-        const items = [];
-        for (var i = 0; i < numberOfCards; i++) {
-          items.push(<Card  />);
+        const info = data.data;
+        for (const group_id in info) {
+          // console.log(data.data[i].group_name);
+          var infoGroupId = info[group_id];
+          var happyCount = infoGroupId.happy_count;
+          var neutralCount = infoGroupId.neutral_count;
+          var sadCount = infoGroupId.sad_count;
+          var maxCount;
+          var maxCategory;
+          if(happyCount >= neutralCount && happyCount >= sadCount) {
+            maxCount = happyCount;
+            maxCategory = 'happy'
+          } else if (neutralCount >= happyCount && neutralCount >= sadCount) {
+            maxCount = neutralCount;
+            maxCategory = 'happy';
+          } else {
+            maxCount = sadCount;
+            maxCategory = 'sad'
+          }
+
+          items.push(<Card header={infoGroupId.group_name} number={maxCount} maxCategory={maxCategory}/>);
         }
         setFields(items);
       } catch (err) {}
@@ -33,10 +53,7 @@ const CardContainer = () => {
           </div>
         </div>
       </div>
-      <Card />
-      {fields.map((field, key) => {
-        return <div key={key}><Card header={field.group_name}/></div>;
-      })}
+      {fields}
     </div>
   );
 };
