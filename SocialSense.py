@@ -1,9 +1,10 @@
 from google.cloud import language_v1
 from flask import Flask, request,jsonify
 import os
+import requests
 import json
 from facebook import GraphAPI
-import psycopg2
+
 app=Flask(__name__)
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "socialsense-c8dcf7afe7fa.json"
 
@@ -46,18 +47,18 @@ credentials = read_creds('Credentials.json')
 graph = GraphAPI(access_token=credentials['access_token'])
 
 userid=graph.get_object("/me?fields=id")
-print (userid);
+print (userid)
 
-@app.route('/',methods=["GET"])
+@app.route('/',methods=["GET","POST"])
 def home():
-    url="localhost:3000/api/users/group-counts"
+    url="https://99b1-2607-fea8-2adf-81a0-a4df-fbaa-34c8-c8c.ngrok.io/api/users/create"
 
     userid = graph.get_object("/me?fields=id")
     grouping = graph.request(userid["id"] + "/groups")['data']
     print(grouping)
     Grp = []
     for group in grouping:
-        groupsent = {"user_id": userid['id'],"group_id":group["id"],"group_name":group["name"], "happy_count": 0, "neutral_count": 0, "sad_count": 0}
+        groupsent = {"userID": userid['id'],"groupID":group["id"],"groupName":group["name"], "happyCount": 0, "neutralCount": 0, "sadCount": 0}
         datafb = graph.get_object(group['id'] + "/feed", page=True, retry=3, limit=10)
         gname=group['name']
         print(datafb)
@@ -72,17 +73,17 @@ def home():
                 pass
         for post in posts:
             if (post["sentiment"][0] > .25):
-                groupsent["happy_count"] += 1
+                groupsent["happyCount"] += 1
             elif (post["sentiment"][0] < -0.25):
-                groupsent["sad_count"] += 1
+                groupsent["sadCount"] += 1
             else:
-                groupsent["neutral_count"] += 1
+                groupsent["neutralCount"] += 1
         Grp.append(groupsent)
     for G in Grp:
         print (G)
-        J=jsonify(G)
-        out=request.post(url,data=J)
-    return True
+
+        requests.post(url, G)
+    return jsonify(Grp)
 
 if __name__ == '__main__':
    app.run()
