@@ -27,7 +27,7 @@ router.post('/create', async (req, res) => {
 })
 
 router.get('/group-total-counts', async (req, res) => {
-  const user_id = req.body.userID
+  const user_id = req.query.userID
   console.log(req)
   try {
     await Users.sync({ force: false })

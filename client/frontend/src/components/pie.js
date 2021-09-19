@@ -9,24 +9,25 @@ const Pie = () => {
   useEffect(() => {
     async function getTotalPie() {
       try{
-        const info = await axios.get(`http://localhost:3000/api/users/group-total-counts`, {params: {"userID": 1}})
+        const info = await axios.get(`http://localhost:3000/api/users/group-total-counts`, {params: {userID: 1}})
+        const data = info.data
         setPieInfo([
           {
-            id: "happy_count",
+            id: "Happy Posts",
             label: "Happy Posts",
-            value: info.happy_count,
+            value: data.happy_count,
             color: "red",
           },
           {
-            id: "neutral_count",
+            id: "Neutral Posts",
             label: "Neutral Posts",
-            value: info.neutral_count,
+            value: data.neutral_count,
             color: "blue",
           },
           {
-            id: "sad_count",
+            id: "Sad Posts",
             label: "Sad Posts",
-            value: info.sad_count,
+            value: data.sad_count,
             color: "black",
           },
         ])
