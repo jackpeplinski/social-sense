@@ -3,9 +3,9 @@ import React from "react";
 const Card = () => {
   return (
     <div className="individual-card">
-      <div>
+      <div className="individual-card-inner">
         <div className="card-header">Love corgis</div>
-        <div>98%</div>
+        <div className="card-number">98%</div>
       </div>
     </div>
   );
