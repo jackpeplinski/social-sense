@@ -45,7 +45,7 @@ const Pie = () => {
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.65}
         activeOuterRadiusOffset={8}
-        colors={{ scheme: "set1" }}
+        colors={['#EB5757', '#BDBDBD', '#6FCF97']}
         borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
         enableArcLinkLabels={false}
         arcLinkLabelsSkipAngle={10}
