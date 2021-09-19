@@ -1,4 +1,3 @@
-import "./App.css";
 import Pie from "./components/pie";
 import Card from "./components/card";
 
