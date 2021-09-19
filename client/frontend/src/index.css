@@ -2,7 +2,8 @@
 
 html {
   height: 100%;
-  background: linear-gradient(180deg, #37D159 0%, #37D159 0.01%, #3796CB 100%) no-repeat center center fixed;
+  background: linear-gradient(180deg, #37d159 0%, #37d159 0.01%, #3796cb 100%)
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -11,7 +12,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,18 +22,52 @@ h1 {
   margin: 0;
   color: white;
   letter-spacing: 0.1em;
+  text-align: center;
 }
 
 h2 {
-  color: #3A2C91;
+  color: #3a2c91;
   margin: 0;
   font-size: 46px;
+  text-align: center;
 }
 
-.card {
+.overall-card {
   width: 60vw;
   margin: 5vh auto;
   background: white;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
   border-radius: 20px;
+}
+
+.individual-card {
+  width: 80%;
+  margin: 5vh auto;
+  background: white;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 20px;
+}
+
+.card-container-label {
+  width: fit-content;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+}
+
+.card-container-label-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.card-container {
+  width: 60vw;
+  margin: 5vh auto;
+  border: 5px solid #ffffff;
+  border-bottom: none;
+  box-sizing: border-box;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-container-header {
+  padding: 10px;
 }
